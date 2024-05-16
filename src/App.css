@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.ToolBar {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+}
+
+.ListElement {
+  display: block;
+  width: 30%;
+  padding: 1rem;
+  border: saddlebrown 1px solid;
+    border-radius: 5px;
+    margin: 1rem;
+    background-color: #f4a460;
+  color: black;
+}
+
+.ListElement:hover {
+  background-color: #d2b48c;
+}
+
+.ListElement .TopBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+

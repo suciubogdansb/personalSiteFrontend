@@ -1,0 +1,90 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.authenticationForm form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.formDiv label
+{
+    display: flex;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formDiv input[type="text"], .authenticationForm form input[type="password"]
+{
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: .8rem;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: white 2px solid;
+    margin: 0 5px 10px;
+}
+
+.formDiv small
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: .7rem;
+}
+
+.formDiv small p
+{
+    white-space: break-spaces;
+    text-align: center;
+}
+
+.authenticationForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: white 5px solid;
+    color: white;
+    max-width: 35%;
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.generalButton {
+    color: white;
+    background-color: black;
+    border: white 2px solid;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: 1rem;
+}
+
+.generalButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.Error {
+    color: red;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: .8rem;
+    margin: 10px;
+}

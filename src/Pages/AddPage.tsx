@@ -1,19 +1,15 @@
-import ToolBar from "../Components/ToolBar";
+import AdminToolBar from "../Components/AdminToolBar";
 import {useTokenStore} from "../Store/TokenStore";
 import AddForm from "../Components/AddForm";
 import React from "react";
 
 export default function AddPage() {
-    const token = useTokenStore((state) => state.token);
-
-    if(token === ""){
-        window.location.href = "/login";
-    }
-
     return (
         <div>
-            <ToolBar></ToolBar>
-            <AddForm key="AddForm"></AddForm>
+            <AdminToolBar></AdminToolBar>
+            <div className="AdminPage">
+                <AddForm key="AddForm"></AddForm>
+            </div>
         </div>
-    )
+    );
 }

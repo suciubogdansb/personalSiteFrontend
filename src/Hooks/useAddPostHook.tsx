@@ -1,39 +1,54 @@
-import {PostCreate} from "../DataType/Post";
+import {PostWithUser} from "../DataType/Post";
 import React from "react";
 import {addPost} from "../Services/PostService";
 import {useTokenStore} from "../Store/TokenStore";
 import {usePostStore} from "../Store/PostStore";
+import {useNavigate} from "react-router-dom";
 
-export default function useAddPostHook({title, content}: PostCreate) {
-    const token = useTokenStore(state => state.token);
-    const setPosts = usePostStore(state => state.setPosts);
-    const posts = usePostStore(state => state.posts);
-    const setPrivatePosts = usePostStore(state => state.setPrivatePosts);
-    const privatePosts = usePostStore(state => state.privatePosts);
+export default function useAddPostHook({title, content, image, setError}:
+                                           {
+                                               title: string;
+                                               content: string;
+                                               image: File | null;
+                                               setError: React.Dispatch<React.SetStateAction<string>>;
+                                           }) {
+    const token = useTokenStore((state) => state.token);
+    const setPosts = usePostStore((state) => state.setPosts);
+    const posts = usePostStore((state) => state.posts);
+    const navigate = useNavigate();
 
-    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        console.log(title, content)
-        e.preventDefault()
+    return (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        console.log(title, content);
+        e.preventDefault();
 
-        addPost({title, content}, token)
+        if (title === "" || content === "") {
+            setError("Title and content must not be empty");
+            return;
+        }
+
+        addPost(token, title, content, image)
             .then((response) => {
-                console.log("Post added")
+                console.log("Post added");
                 const postId = response.data.postId;
                 const username = response.data.username;
-                setPosts([...posts, {title, content, postId, username}])
-                setPrivatePosts([...privatePosts, {title, content, postId}])
-                window.location.href = "/user";
+                const creationDate = new Date(response.data.creationDate);
+                const userId = response.data.userId;
+                const filepath = response.data.filepath;
+                const post: PostWithUser = {title, content, postId, username, creationDate, userId, filepath};
+                setPosts([...posts, post]);
+                navigate(`/admin/posts`)
             })
             .catch((error) => {
-                console.log(error)
+                console.log(error);
                 if (error.code === "ERR_NETWORK") {
-                    window.location.href = "/error";
+                    navigate("/error");
+                } else if (
+                    error.response.status === 401 ||
+                    error.response.status === 404 ||
+                    error.response.status === 400
+                ) {
+                    setError(error.response.data.detail);
                 }
-                else if (error.response.status === 401 || error.response.status === 404) {
-                    window.location.href = "/login";
-                }
-            })
-    }
-
-    return handleSubmit
+            });
+    };
 }

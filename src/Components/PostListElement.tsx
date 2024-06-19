@@ -1,20 +1,26 @@
-import {Post, PostWithUser} from "../DataType/Post";
-import {type} from "node:os";
+import {PostWithUser} from "../DataType/Post";
+import {Link} from "react-router-dom";
 
-export default function PostListElement({post}:
-                                            { post: Post }) {
+export default function PostListElement({post}: { post: PostWithUser }) {
 
-    //check if post is PostWithUser
-    const isPostWithUser = typeof (post as PostWithUser).username !== "undefined";
-        return (
+    const content = post.content;
+    const contentWithBreaks = content.split("\n")
+
+
+    return (
+        <Link to={`/admin/posts/${post.postId}`} style={{height: "fit-content", textDecoration: "none"}}>
             <div className="ListElement">
                 <div className="TopBar">
                     <div>{post.title}</div>
-                    {isPostWithUser && <div>{(post as PostWithUser).username}</div>}
+                    <div>{(post as PostWithUser).username}</div>
                 </div>
-                <div className="ListElementContent">
-                    {post.content}
-                </div>
+                <div style={{fontStyle: "italic"}}>{post.creationDate.toDateString()}</div>
+                <div className="ListElementContent">{
+                    contentWithBreaks.map((line, index) => {
+                        return <div key={index}>{line}</div>
+                    })
+                }</div>
             </div>
-        )
-    }
+        </Link>
+    );
+}

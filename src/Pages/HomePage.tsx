@@ -1,11 +1,12 @@
-import ToolBar from "../Components/ToolBar";
-import GeneralPostList from "../Components/GeneralPostList";
-
+import MainToolBar from "../Components/MainToolBar";
+import "../Style/MainPage.css";
 export default function HomePage() {
     return (
         <div>
-            <ToolBar/>
-            <GeneralPostList/>
+            <MainToolBar/>
+            <div className="MainPage">
+                <div>WIP</div>
+            </div>
         </div>
-    )
+    );
 }

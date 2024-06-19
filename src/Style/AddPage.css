@@ -1,0 +1,75 @@
+.AddForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    margin: 1rem
+}
+
+
+.FormRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.FormGroup {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.FormGroup label {
+    margin-bottom: 5px;
+    color: white;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+.FormGroup input[type="text"] {
+    padding: 5px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 100%;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    color: white;
+    height: 20px;
+}
+
+.FormGroup input[type="file"] {
+    padding: 5px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 100%;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    justify-items: center;
+    color: white;
+    height: 20px;
+}
+
+.FormGroup input[type="file"]::file-selector-button {
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: .6rem;
+}
+
+.FormGroup textarea {
+    padding: 5px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 5px;
+    min-width: 500px;
+    max-width: 100%;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: .85rem;
+    color: white;
+    margin-bottom: 15px;
+}

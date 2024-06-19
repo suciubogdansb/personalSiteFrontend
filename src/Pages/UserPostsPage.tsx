@@ -1,15 +1,19 @@
-import ToolBar from "../Components/ToolBar";
+import AdminToolBar from "../Components/AdminToolBar";
 import UserPostList from "../Components/UserPostList";
 import React from "react";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 
-export default function UserPostsPage(){
+export default function UserPostsPage() {
     return (
         <div>
-            <ToolBar/>
-            <Link to={"/add"}><Button>Add Post</Button></Link>
-            <UserPostList/>
+            <AdminToolBar/>
+            <div className="AdminPage">
+                <UserPostList/>
+                <Link to={"/admin/posts/add"} style={{height: "fit-content"}}>
+                    <Button className="addButton">Add Post</Button>
+                </Link>
+            </div>
         </div>
-    )
+    );
 }

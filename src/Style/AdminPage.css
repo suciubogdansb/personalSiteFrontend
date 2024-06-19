@@ -1,0 +1,150 @@
+.AdminPage {
+    display: flex;
+    background-color: #000000;
+    min-height: 100vh;
+}
+
+.AdminToolBar {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    border-bottom: white 2px solid;
+}
+
+.AdminToolBar button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: white 2px solid;
+    font-size: .8rem;
+    margin: 5px;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+.AdminToolBar button:hover {
+    background-color: white;
+    color: black;
+}
+
+.AdminPage table {
+    border-collapse: collapse;
+    height: fit-content;
+    margin: 1rem;
+    color: white;
+}
+
+.AdminPage table thead th {
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+.AdminPage table tbody td {
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+}
+
+.AdminPage table th, td {
+    border: white 2px solid;
+    padding: 5px;
+}
+
+.ignored {
+    align-items: flex-start;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.addButton {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: white 2px solid;
+    font-size: 1rem;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    height: fit-content;
+}
+
+.addButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.EditButton {
+    margin: 0 5px;
+    background-color: black;
+    color: white;
+    border: white 2px solid;
+    font-size: .7rem;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+.EditButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.DeleteButton {
+    margin: 0 5px;
+    background-color: black;
+    color: orangered;
+    border: orangered 2px solid;
+    font-size: .7rem;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+.DeleteButton:hover {
+    background-color: orangered;
+    color: black;
+}
+
+.PostsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 1rem;
+}
+
+
+.ListElement {
+    display: block;
+    width: 400px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    max-height: 300px;
+    padding: 1rem;
+    border: white 2px solid;
+    background-color: #000000;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.ListElement:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.ListElement .TopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    border-bottom: white 1px solid;
+    margin-bottom: .7rem;
+}
+
+.ListElement:hover .TopBar {
+    border-bottom: black 1px solid;
+}
+
+.ListElementContent {
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    margin-top: .7rem;
+    text-overflow: ellipsis;
+    overflow: scroll;
+}

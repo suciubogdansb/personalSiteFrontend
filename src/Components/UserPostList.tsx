@@ -1,25 +1,29 @@
-import useGetUserPosts from "../Hooks/useGetUserPosts";
-import {usePostStore} from "../Store/PostStore";
+import { usePostStore } from "../Store/PostStore";
+import { jwtDecode } from "jwt-decode";
 import PostList from "./PostList";
+import {useTokenStore} from "../Store/TokenStore";
 import {useEffect, useState} from "react";
+import useGetAllPosts from "../Hooks/useGetAllPosts";
+import { TokenStructure } from "../DataType/TokenStructure";
 
+export default function UserPostList() {
+  const posts = usePostStore((state) => state.posts);
 
-export default function UserPostList(){
-    const privatePosts = usePostStore(state => state.privatePosts);
-    const [hasLoadedPosts, setHasLoadedPosts] = useState(false);
+  const token = useTokenStore((state) => state.token);
+  const decodedToken = jwtDecode(token);
+  const tokenStructure = decodedToken as TokenStructure
+  const userId = tokenStructure.userId;
 
-    const getUserPosts = useGetUserPosts();
+  const privatePosts = posts.filter((post) => post.userId === userId);
+  const [hasLoadedPosts, setHasLoadedPosts] = useState(false);
+  const getPosts = useGetAllPosts();
 
-    useEffect(() => {
-        if (!hasLoadedPosts) {
-            getUserPosts();
-            setHasLoadedPosts(true);
-        }
-    }, [hasLoadedPosts, getUserPosts]);
+  useEffect(() => {
+    if (!hasLoadedPosts) {
+      getPosts();
+      setHasLoadedPosts(true);
+    }
+  }, [hasLoadedPosts, getPosts]);
 
-    return (
-        <PostList
-            posts={privatePosts}
-        />
-    )
+  return <PostList posts={privatePosts} />;
 }

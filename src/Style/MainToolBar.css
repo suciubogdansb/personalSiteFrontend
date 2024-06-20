@@ -1,5 +1,5 @@
 .MainToolBar {
-    background-color: rgba(156, 102, 68, 1);
+    background-color: rgba(156, 102, 68, .99);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,8 @@
     background-color: transparent;
     color: #3f2718;
     font-size: 1rem;
-    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
     border: none;
     padding: 0.5rem 1rem;
     margin: 0.5rem 1.3rem;

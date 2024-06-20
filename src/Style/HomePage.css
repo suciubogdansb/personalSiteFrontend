@@ -1,0 +1,295 @@
+.HomeHeader {
+    background-color: #e6ccb2;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+}
+
+.HomeHeaderImage {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
+    z-index: 0;
+}
+
+.HomeHeaderContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    margin: 1rem 10rem 1rem 3rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1100px) {
+    .HomeHeader {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .HomeHeaderOverlay {
+        order: 1;
+        width: 100%;
+        display: inline-grid;
+    }
+
+    .HomeHeaderImage {
+        order: 1;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .HomeHeaderContent {
+        order: 2;
+        width: 100%;
+        margin-top: -200px;
+        margin-left: -30px;
+    }
+}
+
+.HomeHeaderTitle {
+    font-size: 4rem;
+    color: #5e341e;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 52px;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    margin: 0;
+}
+
+.HomeHeaderSubtitle {
+    font-size: 1.5rem;
+    color: #5e341e;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 45px;
+    font-weight: 600;
+    margin: 1.5rem 1rem;
+}
+
+.AboutMeSegment{
+    display: flex;
+    background-color: #9c6644;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.AboutMeSegment p{
+    font-size: 1.5rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 0;
+    line-height: 40px;
+    font-weight: 450;
+    text-align: center;
+    width: 75%;
+    max-width: 700px;
+    color: #e6ccb2;
+}
+
+.AideSegment{
+    display: flex;
+    background-color: #9c6644;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    align-content: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.AideSegmentImage {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    position: relative;
+    z-index: 0;
+}
+
+.AideSegmentContent {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    z-index: 1;
+    margin: 1rem 7rem 1rem 3rem;
+    background-image: url(../Media/52839106250_6fa0426841_k-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.AideSegmentTitle {
+    font-size: 2.25rem;
+    color: #e6ccb2;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 52px;
+    overflow-wrap: break-word;
+    font-weight: 700;
+}
+
+.AideSegmentSubtitle {
+    font-size: 1.1rem;
+    color: #e6ccb2;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 450;
+    margin: 1.5rem 1rem;
+}
+
+@media (max-width: 1300px) {
+    .AideSegment {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .AideSegmentOverlay {
+        order: 1;
+        width: 100%;
+        display: inline-grid;
+    }
+
+    .AideSegmentImage {
+        order: 1;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+    }
+
+    .AideSegmentContent {
+        order: 2;
+        width: 100%;
+        margin: -430px 0 0 0;
+        background-image: none;
+    }
+
+    .AideSegmentTitle {
+        font-size: 2rem;
+        color: #fff0e0;
+    }
+
+    .AideSegmentSubtitle {
+        color: #fff0e0;
+    }
+
+    .AideSegmentButton {
+        background-color: #fff0e0;
+    }
+}
+
+.AideSegmentButton {
+    background-color: #e6ccb2;
+    color: #3f2718;
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.AideSegmentButton:hover {
+    color: #5e341e;
+}
+
+.CompetitionSegment {
+    display: flex;
+    background-color: #e6ccb2;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.CompetitionSegment img {
+    height: 300px;
+    width: auto;
+    border: #3f2718 solid 2px;
+    margin: 1rem;
+}
+
+.CompetitionSegmentContent {
+    display: block;
+    width: 80%;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 1rem 7rem;
+    color: #5e341e;
+    font-size: 1.25rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 0;
+    line-height: 30px;
+    font-weight: 450;
+}
+
+.HobbiesSegment {
+    display: flex;
+    flex-direction: row;
+    background-color: #e6ccb2;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    overflow-x: auto;
+    align-items: baseline;
+}
+
+.Hobby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    width: 23%;
+    min-width: 240px;
+    background-color: transparent;
+}
+
+.Hobby img {
+    width: 240px;
+    height: 180px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.HobbiesSegmentHolder {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6ccb2;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    color: #5e341e;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+.Hobby p {
+    padding: 5px;
+    font-size: 1.1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 1.3rem;
+    font-weight: 450;
+    text-align: center;
+    color: #5e341e;
+    margin: 0;
+}

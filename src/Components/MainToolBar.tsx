@@ -16,14 +16,17 @@ export default function MainToolBar() {
                     </Link>
                 </div>
                 <div className="MainToolButtons">
-                    <Link to="/aboutme">
+                    <Link to="/">
                         <Button className="MainToolButton">About Me</Button>
                     </Link>
-                    <Link to="/cv">
+                    <a href="/~Suciu_Bogdan_CV.pdf" download>
                         <Button className="MainToolButton">CV</Button>
-                    </Link>
+                    </a>
                     <Link to="/blog">
                         <Button className="MainToolButton">Blog</Button>
+                    </Link>
+                    <Link to="/contact">
+                        <Button className="MainToolButton">Contact Me</Button>
                     </Link>
                 </div>
             </div>

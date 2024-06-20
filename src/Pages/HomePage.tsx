@@ -1,11 +1,20 @@
 import MainToolBar from "../Components/MainToolBar";
-import "../Style/MainPage.css";
+import "../Style/HomePage.css";
+import HomeHeader from "../Components/HomeHeader";
+import AboutMeSegment from "../Components/AboutMeSegment";
+import AideSegment from "../Components/AideSegment";
+import CompetitionSegment from "../Components/CompetitionSegment";
+import HobbiesSegment from "../Components/HobbiesSegment";
 export default function HomePage() {
     return (
         <div>
             <MainToolBar/>
             <div className="MainPage">
-                <div>WIP</div>
+                <HomeHeader></HomeHeader>
+                <AboutMeSegment/>
+                <CompetitionSegment/>
+                <AideSegment/>
+                <HobbiesSegment></HobbiesSegment>
             </div>
         </div>
     );

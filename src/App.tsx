@@ -18,10 +18,15 @@ import AboutMePage from "./Pages/AboutMePage";
 import CVPage from "./Pages/CVPage";
 import BlogPage from "./Pages/BlogPage";
 import BlogPostPage from "./Pages/BlogPostPage";
+import ContactPage from "./Pages/ContactPage";
+import {useTokenStore} from "./Store/TokenStore";
+import Chatbot from "./Components/Chatbot";
 
 const API_URL = "http://localhost:8000"
 
 function App() {
+
+    const backendUp = useTokenStore((state) => state.backendUp);
 
     const sockerService = new SocketService();
 
@@ -68,10 +73,11 @@ function App() {
                 <Routes>
                     <Route path="/error" element={<div>ERROR</div>}></Route>
                     <Route path="/" element={<HomePage/>}></Route>
-                    <Route path="/aboutme" element={<AboutMePage/>}></Route>
+                    {/*<Route path="/aboutme" element={<AboutMePage/>}></Route>*/}
                     <Route path="/cv" element={<CVPage/>}></Route>
                     <Route path="/blog" element={<BlogPage/>}></Route>
                     <Route path="/blog/:id" element={<BlogPostPage/>}></Route>
+                    <Route path="/contact" element={<ContactPage/>}></Route>
                     <Route element={<BackendRoutes/>}>
                         <Route path="/login" element={<LoginPage/>}></Route>
                         <Route element={<UserRoutes/>}>
@@ -90,6 +96,7 @@ function App() {
                     <Route path="*" element={<div>404 NOT FOUND</div>}></Route>
                 </Routes>
             </BrowserRouter>
+            {backendUp && <Chatbot/>}
         </div>
     );
 }

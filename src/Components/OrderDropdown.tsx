@@ -16,15 +16,14 @@ export default function OrderDropdown(
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <Dropdown className="OrderDropdown" show={showDropdown} onToggle={(isOpen) => setShowDropdown(isOpen)}>
+        <Dropdown className="OrderDropdown" show={showDropdown} onToggle={(isOpen) => setShowDropdown(!showDropdown)}>
             <Dropdown.Toggle className="DropdownButton">
                 {selected}
             </Dropdown.Toggle>
-            <Dropdown.Menu className="DropdownMenu">
+            <Dropdown.Menu className="DropdownMenu" style={{display: (showDropdown ? "flex" : "none")}}>
                 {options.map((option) => (
                     <Dropdown.Item key={option} onClick={(e) => {
                         setSelected(option);
-                        setShowDropdown(false);
                     }}>{option}</Dropdown.Item>
                         ))}
                     </Dropdown.Menu>

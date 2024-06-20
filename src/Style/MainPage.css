@@ -6,3 +6,8 @@
     background-color: white;
     color: black;
 }
+
+.MainError {
+    color: red;
+    font-size: 1.5rem;
+}

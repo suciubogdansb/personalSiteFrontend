@@ -1,0 +1,73 @@
+.BlogPostDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    max-width: 700px;
+    margin: 1rem 10%;
+}
+
+.BlogPostDetailsTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3f2718;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 52px;
+    overflow-wrap: break-word;
+    font-weight: 700;
+    margin: 0;
+}
+
+.BlogPostDetailsBar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.BlogPostImage {
+    display: block;
+    max-height: 550px;
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    border: #3f2718 solid 1px;
+}
+
+.BlogPostCreationDeatails
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.Creator {
+    font-size: 1.5rem;
+    color: #3f2718;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 35px;
+    font-weight: 600;
+    margin: 0 0 .5rem;
+}
+
+.CreationTime {
+    font-size: 1rem;
+    color: #3f2718;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    font-style: italic;
+    margin: 0;
+}
+
+.ContentParagraph {
+    font-size: 1.2rem;
+    color: black;
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.003em;
+    margin: 1rem 0;
+    line-height: 32px;
+    overflow-wrap: break-word;
+}
+

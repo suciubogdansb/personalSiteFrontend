@@ -3,7 +3,6 @@ import {Button} from "react-bootstrap";
 import usePromote from "../Hooks/usePromote";
 import React from "react";
 import useDelete from "../Hooks/useDelete";
-import {Role} from "../DataType/Role";
 
 
 interface UserListElementProps {

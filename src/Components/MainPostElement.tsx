@@ -13,7 +13,7 @@ export default function MainPostElement({post}: { post: PostWithUser }) {
             <div className="MainListElement">
                 {post.filepath &&
                     <div className="ImageContainer">
-                        <img src={getImage(post.postId, post.filepath)} alt="Post Image" className="ImageMainPost"/>
+                        <img src={getImage(post.postId, post.filepath)} alt="Post" className="ImageMainPost"/>
                     </div>
                 }
                 <div className="SibeBar">

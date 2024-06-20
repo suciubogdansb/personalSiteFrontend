@@ -1,12 +1,11 @@
 import MainToolBar from "../Components/MainToolBar";
-import BlogComponent from "../Components/BlogComponent";
 import {useParams} from "react-router-dom";
 import useGetPostById from "../Hooks/useGetPostById";
-import PostDetails from "../Components/PostDetails";
 import React, {useEffect, useState} from "react";
 import {PostWithUser} from "../DataType/Post";
 import BlogPostDetails from "../Components/BlogPostDetails";
 import {useTokenStore} from "../Store/TokenStore";
+import FooterComponent from "../Components/FooterComponent";
 
 export default function BlogPostPage() {
     const {id} = useParams();
@@ -27,6 +26,7 @@ export default function BlogPostPage() {
             <div className="MainPage">
                 { (element === undefined || !backendUp) ? <h1 className="MainError">Error</h1> : <BlogPostDetails element={element}/>}
             </div>
+            <FooterComponent/>
         </div>
     );
 }

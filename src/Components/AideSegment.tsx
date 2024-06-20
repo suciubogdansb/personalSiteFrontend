@@ -1,6 +1,4 @@
 import aide from "../Media/52938514586_be46c62f0d_c.jpg";
-import aideLogo from "../Media/52839106250_6fa0426841_k-2.png";
-import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 
 export default function AideSegment() {
@@ -17,7 +15,6 @@ export default function AideSegment() {
                     a local cosmetics company, where I was responsible for fixing and maintaining the company's
                     WordPress and PrestaShop websites, among other things.
                 </p>
-                <br/>
                 <p className="AideSegmentSubtitle">
                     Since March of 2023, I have been working on the edTech startup AIDE as a Software Developer and a
                     founding member. Our focus is on creating a new learning experience and automating training in

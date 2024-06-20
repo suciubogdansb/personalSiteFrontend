@@ -5,6 +5,8 @@ import AboutMeSegment from "../Components/AboutMeSegment";
 import AideSegment from "../Components/AideSegment";
 import CompetitionSegment from "../Components/CompetitionSegment";
 import HobbiesSegment from "../Components/HobbiesSegment";
+import FooterComponent from "../Components/FooterComponent";
+import React from "react";
 export default function HomePage() {
     return (
         <div>
@@ -16,6 +18,7 @@ export default function HomePage() {
                 <AideSegment/>
                 <HobbiesSegment></HobbiesSegment>
             </div>
+            <FooterComponent/>
         </div>
     );
 }

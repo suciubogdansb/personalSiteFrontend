@@ -1,7 +1,6 @@
 import {PostWithUser} from "../DataType/Post";
 import {NavigateFunction, useNavigate} from "react-router-dom";
-import getAllPosts, {getFilteredPosts} from "../Services/PostService";
-import {usePostStore} from "../Store/PostStore";
+import {getFilteredPosts} from "../Services/PostService";
 import React from "react";
 
 function getFilterPostsHelper(

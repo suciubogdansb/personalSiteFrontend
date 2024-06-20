@@ -101,6 +101,7 @@
     padding: 10px;
     border-radius: 5px;
     margin: 5px 0;
+    width: fit-content;
     max-width: 70%;
     font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
     font-size: .8rem;
@@ -113,6 +114,7 @@
     border: #3f2718 1px solid;
     border-radius: 5px;
     margin: 5px 0;
+    width: fit-content;
     max-width: 70%;
     font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
     font-size: .8rem;
@@ -127,6 +129,7 @@
     border: red 1px solid;
     border-radius: 5px;
     margin: 5px 0;
+    width: fit-content;
     max-width: 70%;
     font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
     font-size: .8rem;

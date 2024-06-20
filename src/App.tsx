@@ -14,7 +14,6 @@ import UpdatePage from "./Pages/UpdatePage";
 import socketIOClient from "socket.io-client";
 import {SocketService} from "./Services/SocketService";
 import HomePage from "./Pages/HomePage";
-import AboutMePage from "./Pages/AboutMePage";
 import CVPage from "./Pages/CVPage";
 import BlogPage from "./Pages/BlogPage";
 import BlogPostPage from "./Pages/BlogPostPage";

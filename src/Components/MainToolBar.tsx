@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import React, {useEffect} from "react";
+import React from "react";
 import {Image} from "react-bootstrap";
 import signature from "../Media/signature-2.png";
 import "../Style/MainToolBar.css";

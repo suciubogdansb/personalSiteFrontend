@@ -1,8 +1,7 @@
 import AdminToolBar from "../Components/AdminToolBar";
 import UpdateForm from "../Components/UpdateForm";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useParams} from "react-router-dom";
-import {PostWithUser} from "../DataType/Post";
 import {usePostStore} from "../Store/PostStore";
 import useGetAllPosts from "../Hooks/useGetAllPosts";
 import useGetPost from "../Hooks/useGetPost";

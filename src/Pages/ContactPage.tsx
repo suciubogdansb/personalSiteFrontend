@@ -1,6 +1,7 @@
 import MainToolBar from "../Components/MainToolBar";
-import BlogComponent from "../Components/BlogComponent";
 import ContactForm from "../Components/ContactForm";
+import FooterComponent from "../Components/FooterComponent";
+import React from "react";
 
 export default function ContactPage() {
     return (
@@ -9,6 +10,7 @@ export default function ContactPage() {
             <div className="MainPage">
                 <ContactForm/>
             </div>
+            <FooterComponent/>
         </div>
     );
 }

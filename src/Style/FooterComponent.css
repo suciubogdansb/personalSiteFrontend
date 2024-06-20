@@ -1,0 +1,79 @@
+.Footer {
+    width: 80%;
+    padding: 20px 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(156, 102, 68, 1);
+    color: #3f2718;
+    align-items: center;
+}
+
+.IconContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.Icon {
+    margin: 0 10px;
+    color: #3f2718;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.Icon:hover {
+    color: #5e341e;
+}
+
+.AddressContainer {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 450;
+    text-decoration: none;
+    color: #3f2718;
+}
+
+.AddressContainer:hover {
+    color: #5e341e;
+}
+
+.LocationIcon {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.PhoneContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.PhoneLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #3f2718;
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 450;
+}
+
+.PhoneLink:hover {
+    color: #5e341e;
+}
+
+.PhoneIcon {
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.Addresses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

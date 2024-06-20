@@ -1,0 +1,43 @@
+.DetailsContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 1rem;
+}
+
+.DetailsContainer h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+    color: white;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+}
+
+.DetailsContainer img {
+    width: 100%;
+    border: white 2px solid;
+}
+
+.DetailsContainer p {
+    font-size: 1rem;
+    margin: 1rem;
+    color: white;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+}
+
+.DetailsContainer .DetailsBar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: Haettenschweiler, 'Arial Bold', sans-serif;
+    font-size: .9rem;
+    margin: 0 1rem;
+}
+
+.DetailsControls {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 1rem;
+}

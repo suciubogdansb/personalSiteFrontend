@@ -1,0 +1,150 @@
+.ChatbotContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.ChatbotToggle {
+    background-color: #3f2718;
+    color: #e6ccb2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.ChatbotWindow {
+    width: 450px;
+    height: 550px;
+    background-color: #e6ccb2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: #3f2718 1px solid;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.ChatbotHeader {
+    background-color: #3f2718;
+    color: #e6ccb2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ChatbotHeader h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.ChatbotHeader button {
+    background: none;
+    border: none;
+    color: #e6ccb2;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ChatbotBody {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ChatbotInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f2718;
+}
+
+.ChatbotInput input {
+    flex: 1;
+    padding: 10px;
+    border: #3f2718 1px solid;
+    border-radius: 5px;
+    background-color: #e6ccb2;
+    color: #5e341e;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.ChatbotInput input::placeholder {
+    color: #651e06;
+}
+
+.ChatbotInput button {
+    background-color: #3f2718;
+    color: #e6ccb2;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.Responsebot {
+    background-color: #3f2718;
+    color: #e6ccb2;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: fit-content;
+    max-width: 70%;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: .8rem;
+}
+
+.Responseuser {
+    background-color: #e6ccb2;
+    color: #3f2718;
+    padding: 9px;
+    border: #3f2718 1px solid;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: fit-content;
+    max-width: 70%;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: .8rem;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.Responseerror {
+    background-color: #e19e95;
+    color: red;
+    padding: 9px;
+    border: red 1px solid;
+    border-radius: 5px;
+    margin: 5px 0;
+    width: fit-content;
+    max-width: 70%;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: .8rem;
+    text-align: center;
+    align-self: center;
+}
+
+.Responseerror p {
+    margin: 0;
+}
+
+.Responseuser p {
+    margin: 0;
+}
+
+.Responsebot p {
+    margin: 0;
+}

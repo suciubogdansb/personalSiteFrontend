@@ -1,0 +1,113 @@
+.ContactFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+.ContactHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #e6ccb2;
+    width: 70%;
+    height: 20vh;
+    padding: 0 15%;
+}
+
+.ContactTitle {
+    font-size: 2rem;
+    color: #3f2718;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+.ContactSubtitle
+{
+    font-size: 1.1rem;
+    color: black;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    font-weight: 500;
+}
+
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+    margin: 0;
+}
+
+.ContactFormGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.ContactFormGroup label {
+    font-size: 1.1rem;
+    color: #3f2718;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.ContactFormGroup input {
+    font-size: 1rem;
+    color: #3f2718;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 2px solid #3f2718;
+    border-radius: 5px;
+    width: 220px;
+}
+
+.GroupTextarea {
+    width: 100%;
+}
+
+.ContactFormGroup textarea {
+    font-size: 1rem;
+    color: #3f2718;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+    margin: 0.5rem 1rem;
+    border: 2px solid #3f2718;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.ContactFormRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+    margin: 0;
+}
+
+.ContactSubmit {
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #3f2718;
+    background-color: #e6ccb2;
+    border: #3f2718 solid 1px;
+}
+
+.ContactSubmit:hover {
+    color: #5e341e;
+    border-color: #5e341e;
+}

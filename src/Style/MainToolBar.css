@@ -1,0 +1,52 @@
+.MainToolBar {
+    background-color: rgba(156, 102, 68, .99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.MainToolHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 80%;
+}
+
+.MainToolImage {
+    width: auto;
+    height: 65px;
+    margin: 1rem;
+}
+
+.MainToolButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.MainToolButton {
+    background-color: transparent;
+    color: #3f2718;
+    font-size: 1rem;
+    font-family: sohne, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.MainToolButton:hover {
+    background-color: transparent;
+    color: #5e341e;
+}
+
+.ToolBarBack {
+    background-color: rgba(156, 102, 68, 1);
+}

@@ -18,15 +18,11 @@ import CVPage from "./Pages/CVPage";
 import BlogPage from "./Pages/BlogPage";
 import BlogPostPage from "./Pages/BlogPostPage";
 import ContactPage from "./Pages/ContactPage";
-import {useTokenStore} from "./Store/TokenStore";
-import Chatbot from "./Components/Chatbot";
+import ContactListPage from "./Pages/ContactListPage";
 
 const API_URL = "http://localhost:8000"
 
 function App() {
-
-    const backendUp = useTokenStore((state) => state.backendUp);
-
     const sockerService = new SocketService();
 
     useEffect(() => {
@@ -89,13 +85,13 @@ function App() {
                             <Route element={<AdminRoutes/>}>
                                 <Route path="/admin/users/create" element={<RegisterPage/>}></Route>
                                 <Route path="/admin/users" element={<UserManagementPage/>}/>
+                                <Route path="/admin/contacts" element={<ContactListPage/>}/>
                             </Route>
                         </Route>
                     </Route>
                     <Route path="*" element={<div>404 NOT FOUND</div>}></Route>
                 </Routes>
             </BrowserRouter>
-            {backendUp && <Chatbot/>}
         </div>
     );
 }

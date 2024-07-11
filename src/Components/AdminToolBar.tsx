@@ -21,9 +21,14 @@ export default function AdminToolBar() {
                 </Link>
                 {
                     role === Role.ADMIN && (
-                        <Link to="/admin/users">
-                            <Button>Manage Users</Button>
-                        </Link>
+                        <>
+                            <Link to="/admin/users">
+                                <Button>Manage Users</Button>
+                            </Link>
+                            <Link to="/admin/contacts">
+                                <Button>Manage Contacts</Button>
+                            </Link>
+                        </>
                     )
                 }
             </div>

@@ -6,6 +6,7 @@ import {PostWithUser} from "../DataType/Post";
 import BlogPostDetails from "../Components/BlogPostDetails";
 import {useTokenStore} from "../Store/TokenStore";
 import FooterComponent from "../Components/FooterComponent";
+import Chatbot from "../Components/Chatbot";
 
 export default function BlogPostPage() {
     const {id} = useParams();
@@ -27,6 +28,7 @@ export default function BlogPostPage() {
                 { (element === undefined || !backendUp) ? <h1 className="MainError">Error</h1> : <BlogPostDetails element={element}/>}
             </div>
             <FooterComponent/>
+            {backendUp && <Chatbot/>}
         </div>
     );
 }

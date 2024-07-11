@@ -5,6 +5,7 @@ import {useTokenStore} from "../Store/TokenStore";
 import BlogHeader from "../Components/BlogHeader";
 import FooterComponent from "../Components/FooterComponent";
 import React from "react";
+import Chatbot from "../Components/Chatbot";
 
 export default function BlogPage() {
     const backendUp = useTokenStore((state) => state.backendUp)
@@ -19,6 +20,7 @@ export default function BlogPage() {
                 {backendUp ? <BlogComponent/> : <h1 className="MainError">Server down</h1>}
             </div>
             <FooterComponent/>
+            {backendUp && <Chatbot/>}
         </div>
     );
 }

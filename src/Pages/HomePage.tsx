@@ -7,7 +7,10 @@ import CompetitionSegment from "../Components/CompetitionSegment";
 import HobbiesSegment from "../Components/HobbiesSegment";
 import FooterComponent from "../Components/FooterComponent";
 import React from "react";
+import Chatbot from "../Components/Chatbot";
+import {useTokenStore} from "../Store/TokenStore";
 export default function HomePage() {
+    const backendUp =useTokenStore((state) => state.backendUp);
     return (
         <div>
             <MainToolBar/>
@@ -19,6 +22,7 @@ export default function HomePage() {
                 <HobbiesSegment></HobbiesSegment>
             </div>
             <FooterComponent/>
+            {backendUp && <Chatbot/>}
         </div>
     );
 }

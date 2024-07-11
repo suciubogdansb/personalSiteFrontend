@@ -98,7 +98,7 @@
 
 .DeleteButton:hover {
     background-color: orangered;
-    color: black;
+    color: rgba(0, 0, 0, 0.86);
 }
 
 .PostsDiv {
@@ -147,4 +147,18 @@
     margin-top: .7rem;
     text-overflow: ellipsis;
     overflow: scroll;
+}
+
+.ListElementContent div {
+    margin: 6px 0;
+}
+
+
+
+
+.ContactsDiv {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 1rem;
 }
